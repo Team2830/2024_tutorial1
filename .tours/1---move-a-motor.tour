@@ -1,0 +1,56 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "1 - Move some Motors",
+  "steps": [
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Welcome to FRC programming!",
+      "line": 1
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "We're going to start off by moving a motor. This sounds really simple, but this is the foundation behind everything we're going to do!",
+      "line": 2
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "When you're starting off, there's going to be **A LOT** of new stuff. At first, you probably won't understand a lot of it.\r\n\r\nThat's okay!\r\n\r\nOur goal is to get you a lot of repetition right now, so you get comfortable with the basic commands.",
+      "line": 3
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "What we ask right now, is to pay attention to what we're writing.\r\n\r\nPay attention to the small details. What letters are lower cased and upper cased? Where are the parenthesis? Commas? Periods?\r\n\r\nYour goal right now is to get comfortable typing in these commands!",
+      "line": 4
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Now, let's take a look at the first part of the program on this line.\r\n\r\nWhat we're doing here is creating an **object** that our program can do something with.\r\n\r\nThe word **object** is a formal term in programming, but it means exactly what you think it does. It's just some item, like a pencil, that can do some things, like write.\r\n\r\nIn this case, our **object** represents a motor on the robot that we're trying to spin.\r\n\r\nWe also gave our **object** a name, here, that name is `m_BottomIntake`. This name let's us use the **object** later.",
+      "line": 11
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Now, we're going to use the **object** we just created.\r\n\r\nIn Java, an **object** refers to some item, and a **method** refers to a thing the item can do.\r\n\r\nFor example, an **object** could be a pencil, and a **method** of that pencil could be to erase.\r\n\r\nIn our case, the **object** is one of our intake motors, and the **method** is to make it move at a certain speed.\r\n\r\nTo do that, we'll use this code:\r\n```java\r\n    m_BottomIntake.set(1.0);\r\n```\r\n\r\nHere, `m_BottomIntake` is the **object** and `set` is the **method**.\r\n\r\nThe number inside the parenthesis is called an **argument**. This is just additional information for the **method** to execute in the way you want. In this case, our **argument** is specifying how fast we want the motor to go. `1.0` is full speed forward, `-1.0` is full speed backwards, and `0.0` is stopped.\r\n\r\nFinally, notice the semi-colon `;`\r\n\r\nThis is just a way to tell Java that this statement is done. For now, everytime we write a line of code, we need to end it with a semi-colon.\r\n\r\n**If you haven't, press \"Insert Code\" above to insert this line of code into the program.**",
+      "line": 33
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Now, it's time to run your code on the robot!\r\n\r\nTo do that, just get Kevin, Gabe, or one of the mentors, and ask them to show you how to deploy code!",
+      "line": 34
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Now that we've run our first program, let's break down this line of code a little bit.\r\n\r\nWe already introduced you to **objects**. An **object** is just some item that does certain things. Each thing that the **object** can do is called a **method**.\r\n\r\n# Classes\r\nWe're going to break this line down a little bit more and introduce the concept of a **class**. In this case, the **class** is `TalonFX`. What a **class** is, is a type of **object**. In the real world, an example of a **class** might be a Dog. You can have a bunch of Dogs in the world, one might be named Spot, another one could be named Fluffy. In this case, Spot and Fluffy are each **objects** of the Dog **class**.\r\n\r\nThe reason we have **classes** is because they define what **methods** are available to their **objects**. In other words, the Dog **class** could have **methods** such as `bark()`, `walk()`, and `sit()`. Then, because our **object** `Spot` is an instance of the `Dog` **class**, we can ask `Spot` to use each of these **methods** by calling something like ```Spot.bark();```\r\n\r\nIf we had another **class**, such as a `Tree` class, it would probably have different **methods**. So if we had a `Tree` object named `theBigTree`, it would probably have **methods** such as `photosynthesize()` and `grow()`, but not **methods** like `bark()`\r\n\r\nIn our case, the `TalonFX` **class** is a type of motor, and the **object** `m_BottomIntake` is an individual motor of that type.\r\n\r\n# Constructors\r\nThe other thing you see in the line of code above is `new TalonFX(14);`\r\n\r\nThis is what's called a **contstructor**. A **constructor** is just a way of telling Java how to create an **object**.\r\n\r\nIn this case, we see an **argument** between the parenthesis, in this case, the **argument** is `14`. This number is just an ID that we assigned to the motor when we were wiring it so the program would know what motor it's talking to.",
+      "line": 11
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Now, let's add the other intake motor!\r\n\r\nTo do this, we'll add this code:\r\n```java\r\n    TalonFX m_TopIntake = new TalonFX(13);\r\n```\r\n\r\nIn this case, the **class** is still `TalonFX`, because it's the same type of motor. The next word is `m_TopIntake`, this is a new **object** that belongs to the `TalonFX` class.\r\n\r\nIn the constructor, we see that the **argument** is different. Instead of `14`, the **argument** here is `13`. That's because we're talking to another motor, and we need to use that motor's individual ID.\r\n\r\n**If you haven't already, click to insert the code above, then move onto the next step.**",
+      "line": 12
+    },
+    {
+      "file": "src/main/java/frc/robot/Robot.java",
+      "description": "Now, we're going to have you add some code to this line to run our new motor.\r\n\r\nOn this line, you can write very similar code to the line above. However, what's different is the **object** we're using. So, instead of using `m_BottomMotor`, we're going to use `m_TopMotor`.\r\n\r\n**IMPORTANT:** For now, when you're writing code, please don't copy and paste! The reason why is because it takes time to get used to typing in code like this. If all you're doing is copy and paste, you're not really learning this skill that you'll need during the season.\r\n\r\n**Please create the code to run the top motor on this line at the same speed the bottom motor is running at. Once you're done, deploy the code and try it out!**",
+      "line": 38
+    }
+  ]
+}
