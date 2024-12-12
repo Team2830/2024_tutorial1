@@ -9,7 +9,6 @@ public class Robot extends TimedRobot {
    * This is where we create objects that our code will use.
    */
   TalonFX m_BottomIntake = new TalonFX(14);
-  TalonFX m_TopIntake = new TalonFX(13);
 
   @Override
   public void robotInit() {
@@ -34,7 +33,6 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    m_BottomIntake.set(1.0);
 
   } // This is outside of the curly braces. Don't put code here!
 
